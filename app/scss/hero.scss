@@ -1,0 +1,277 @@
+@import "mixins";
+.hero{
+  position: relative;
+  &-block{
+    padding: 112px 0 0 0;
+  }
+  &__content{
+    &-title{
+      strong{
+        color: var(--green);
+        font-weight: bold;
+        font-size: 52px;
+        line-height: 60px;
+      }
+    }
+    &-text{
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 0;
+    }
+    &-btn{
+      margin-top: 40px;
+      @include button-green();
+    }
+  }
+  &__img{
+    position: relative;
+    &-bag{
+      right: 184px;
+      top: -85px;
+      position: absolute;
+      transform: rotate(-3.99deg);
+    }
+    &-like{
+      position: absolute;
+      right: 220px;
+      top: 20px;
+      transform: rotate(-6.63deg);
+    }
+    &-message{
+      right: 100px;
+      position: absolute;
+    }
+    &-article{
+      right: 86px;
+      top: 80px;
+      position: absolute;
+    }
+    &-woman{
+      position: absolute;
+      right: 170px;
+      top: 80px;
+      transform: rotate(-2.48deg);
+    }
+    &-sms{
+      position: absolute;
+      right: -83px;
+      bottom: 51px;
+      transform: rotate(-11.41deg);
+    }
+    &-box{
+      position: absolute;
+      right: -59px;
+      bottom: -45px;
+      transform: rotate(-11.41deg);
+    }
+    &-statistics{
+      right: -100px;
+      bottom: -140px;
+      position: absolute;
+    }
+  }
+  &__arrow{
+    position: absolute;
+    width: 84%;
+    height: 50px;
+    top: -51px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 1749px) {
+  .hero__arrow {
+    left: 0;
+    width: 88%;
+  }
+}
+@media (max-width: 1400px) {
+  .hero__arrow {
+    height: auto;
+    width: 100%;
+  }
+  .hero__img-statistics {
+    right: 0;
+  }
+  .hero__img-box{
+    right: 0;
+  }
+  .hero__img-sms{
+    right: 0;
+  }
+}
+@media (max-width: 1111px) {
+  .hero__arrow {
+    top: 89px;
+  }
+}
+@media (max-width: 991px) {
+  .hero__img{
+    margin-top: 180px;
+  }
+  .hero__img-woman{
+    position: static!important;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .hero__img-bag {
+    left: 410px;
+    width: 50px;
+  }
+  .hero__img-like{
+    left: 192px;
+    width: 83px;
+    top: 79px;
+  }
+  .hero__img-message {
+    right: 274px;
+    width: 85px;
+    top: 40px;
+  }
+  .hero__img-article {
+    right: 150px;
+    top: 240px;
+  }
+  .hero__img-sms {
+    right: 114px;
+    top: 493px;
+    width: 59px;
+  }
+  .hero__img-box {
+    right: 180px;
+    bottom: 26px;
+    width: 72px;
+  }
+  .hero__img-statistics {
+    right: 302px;
+    bottom: -89px;
+    width: 94px;
+  }
+  .hero__arrow {
+    display: none;
+  }
+  .hero-block{
+    justify-content: center!important;
+  }
+  .hero__img-woman{
+    position: static!important;
+  }
+  .hero__content{
+    text-align: center;
+  }
+  .hero__arrow{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__img{
+    margin-top: 180px;
+  }
+  .hero__img-woman{
+    position: static!important;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .hero__img-bag {
+    top: -149px;
+    left: 265px;
+    width: 50px;
+  }
+  .hero__img-like{
+    left: 60px;
+  }
+  .hero__img-message {
+    right: 157px;
+  }
+  .hero__img-article {
+    right: 35px;
+  }
+  .hero__img-sms {
+    right: 35px;
+  }
+  .hero__img-box {
+    right: 110px;
+    bottom: -41px;
+  }
+  .hero__img-statistics {
+    right: 302px;
+    bottom: -89px;
+    width: 94px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero__img {
+    margin-top: 100px;
+  }
+  .hero__img-woman{
+    width: 100%;
+  }
+  .hero__img-bag {
+    display: none;
+  }
+  .hero__img-like{
+    display: none;
+  }
+  .hero__img-message {
+    display: none;
+  }
+  .hero__img-article {
+    display: none;
+  }
+  .hero__img-sms {
+    display: none;
+  }
+  .hero__img-box {
+    display: none;
+  }
+  .hero__img-statistics {
+    display: none;
+  }
+}
+@media (max-width: 425px){
+  .hero__content-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .hero__content-title strong{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .hero__content-text {
+    font-size: 20px;
+    line-height: 29px;
+  }
+  .hero__content-btn{
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .hero__img {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 320px){
+  .hero__content-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .hero__content-title strong{
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .hero__content-text {
+    font-size: 16px;
+    line-height: 29px;
+  }
+  .hero__content-btn{
+    padding: 8px 10px;
+    font-size: 16px;
+  }
+}
+
+

@@ -1,0 +1,85 @@
+@import "mixins";
+.steps{
+  padding-top: 160px;
+  padding-bottom: 160px;
+  &__title{
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  &__column{
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    &-number{
+      color: var(--green);
+      font-weight: 800;
+      font-size: 58px;
+      line-height: 79px;
+    }
+    &-line{
+      position: relative;
+      @include silver-line();
+    }
+    &-content{
+      margin-top: 30px;
+      margin-left: 50px;
+      &-title{
+        margin-bottom: 16px;
+      }
+      &-text{
+        max-width: 730px;
+      }
+    }
+  }
+  &__btn{
+    text-align: center;
+    &-link{
+      @include button-green();
+    }
+  }
+}
+
+
+@media (max-width: 425px) {
+  .steps__title{
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 320px) {
+  .steps {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .steps-block{
+    text-align: center;
+  }
+  .steps__title{
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .steps__column{
+    position: relative;
+    margin-bottom: 150px;
+  }
+  .steps__column-number{
+    position: absolute;
+    font-size: 60px;
+    bottom: 0;
+    top: -95px;
+  }
+  .steps__column-content{
+    margin: 0 auto;
+  }
+  .steps__column-content-title{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .steps__column-content-text{
+    font-size: 16px;
+  }
+  .steps__btn-link{
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+}

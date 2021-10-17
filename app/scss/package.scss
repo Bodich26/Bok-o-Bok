@@ -1,0 +1,134 @@
+@import "mixins";
+.package{
+  padding-top: 160px;
+  padding-bottom: 160px;
+  &__plan{
+    padding-left: 52px;
+  }
+  &__title{
+    text-align: center;
+    max-width: 870px;
+    margin: 0 auto;
+    position: relative;
+    @include blue-line();
+  }
+  &__text{
+    text-align: center;
+    max-width: 562px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    margin-top: 53px;
+  }
+  &-block{
+    column-gap: 60px;
+    margin-bottom: 32px;
+  }
+  &__column{
+    padding: 60px 55px;
+    border-radius: 23px;
+    border: 1px solid rgba(51, 51, 153, 0.2);
+    &-wrap{
+      display: flex;
+      margin-bottom: 20px;
+      img{
+        width: 20px;
+      }
+      &-text{
+        margin-left: 11px;
+        &-none{
+          margin-left: 11px;
+          opacity: 0.5;
+        }
+      }
+    }
+    &-title{
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    &-text{
+      text-align: center;
+      margin-bottom: 32px;
+      strong{
+        font-weight: 900;
+        font-size: 67px;
+        line-height: 60px;
+        color: var(--green);
+      }
+    }
+    &-line{
+      margin-bottom: 52px!important;
+      @include green-line();
+    }
+    &-btn{
+      margin-top: 52px;
+      text-align: center;
+      &-link{
+        @include button-green();
+      }
+    }
+  }
+}
+
+
+@media (max-width: 924px) {
+  .package-block{
+    row-gap: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .package__title{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .package__column{
+    padding: 30px 25px;
+  }
+  .package__column-title{
+    font-size: 30px;
+  }
+  .package__column-text{
+    margin-bottom: 15px;
+    strong{
+      font-size: 50px;
+    }
+  }
+  .package__plan{
+    padding-left: 0;
+  }
+}
+@media (max-width: 320px) {
+  .package {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .package__title{
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .package__text {
+    padding-bottom: 55px;
+    font-size: 16px;
+  }
+  .package__column{
+    padding: 22px 18px;
+  }
+  .package__column-title{
+    font-size: 27px;
+  }
+  .package__column-text{
+    margin-bottom: 10px;
+    font-size: 16px;
+    strong{
+      font-size: 40px;
+    }
+  }
+  .package__column-wrap-text {
+    font-size: 16px;
+  }
+  .package__column-wrap-text-none {
+    font-size: 16px;
+  }
+  .package__column-btn-link{
+    padding: 10px 14px;
+  }
+}

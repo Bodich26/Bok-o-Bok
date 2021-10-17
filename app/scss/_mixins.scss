@@ -1,0 +1,53 @@
+@mixin button-green(){
+  border: 1px solid var(--green);
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 13px;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 16px 24px;
+  font-family: 'URW Geometric', sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+    &:hover{
+      border: 1px solid var(--green);
+      color: var(--green);
+      background-color: var(--white);
+    }
+}
+
+@mixin silver-line(){
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 92px;
+    background-color: var(--silver);
+    bottom: -53px;
+    left: -30px;
+  }
+}
+
+@mixin blue-line(){
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: var(--blue);
+    bottom: -28px;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+}
+
+@mixin green-line(){
+  margin: 0 auto;
+  width: 240px;
+  height: 1px;
+  background-color: var(--green);
+}
